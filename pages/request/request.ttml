@@ -1,0 +1,78 @@
+<view class="full-screen-container " bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{animation}}">
+<view class="trang-request" >
+  <div class="container-1">
+    <div class="box-full">
+    <div class="container-4">
+      <!-- combobox chọn lý do -->
+      <div style="float: left; margin-bottom: 0;"></div>
+        <picker mode="selector" range="{{options}}" value="{{index}}" bindchange="onPickerChange" class="option">
+          <view class="picker-placeholder">
+            {{selectedOption || "Chọn"}}
+            <block tt:if="{{selectedOption || 'Công tác'}}"></block>
+            <image style="width: 50rpx; height: 50rpx; float: right; margin-right: 10rpx;"  src="../../image/icons_dropdown.png" />
+            <!-- <span style="font-size: small; float: right; padding-right: 10px; font-size: 25rpx;">▶</span> -->
+          </view>
+        </picker>
+      </div>
+
+      <div tt:if="{{selectedOption == ' Công tác'}}">
+        <!-- ngày đi -->
+        <picker mode="date" bindchange="onFirstDate" value="{{firstdate}}" class="option">
+          <view class="picker-placeholder">
+            Ngày đi: {{firstdate}}
+          <image style=" width: 50rpx; height: 50rpx; float: right; margin-right: 10rpx;" src="../../image/calenderblue.png" />
+          </view>
+        </picker>
+        <!-- ngầy về -->
+        <picker mode="date" bindchange="onEndDate" start="{{firstdate}}" value="{{enddate}}" class="option">
+          <view class="picker-placeholder">
+            <!-- <div class="block-date"> -->
+              <view class="picker-placeholder" tt:if="{{enddate == ''}}">
+                Ngày về:
+                  <image style=" width: 50rpx; height: 50rpx; float: right; padding-right: 10rpx;" src="../../image/calenderblue.png" />
+              </view>
+              <view class="picker-placeholder" tt:if="{{enddate != ''}}">
+                <div tt:if="{{enddate < firstdate}}">
+                  Ngày về: <span style="color: red;">Không hợp lệ</span>
+                  <image style="width: 50rpx; height: 50rpx; float: right; padding-right: 10rpx;"  src="../../image/calenderblue.png" />
+                </div>
+                <div tt:else >
+                  Ngày về: {{enddate}}
+                  <image style="width: 50rpx; height: 50rpx; float: right; padding-right: 10rpx;"  src="../../image/calenderblue.png" />
+                </div>
+              </view>
+          </view>
+        </picker>
+      </div>
+      <!-- Chọn ngày tháng năm -->
+      <!--   -->
+      <div tt:if="{{selectedOption != ' Công tác'}}">
+        <picker mode="date" bindchange="onDateChange" value="{{date}}" class="option">
+          <view class="picker-placeholder">
+            Ngày: {{date}}
+          <image style=" width: 50rpx; height: 50rpx; float: right; margin-right: 10rpx;" src="../../image/calenderblue.png" />
+          </view>
+        </picker>
+      </div>
+      <!-- Nhập lý do cụ thể -->
+      <div class="">
+        <textarea placeholder="Nhập lý do" class="textarea" value="{{reason}}" type="text" bindinput="bindReasonInput"></textarea>
+      </div>
+      <!-- Chọn minh chứng cụ thể -->
+      <view>
+        <button class="proof" bindtap="chooseFile">
+          {{fileName ? fileName : "Chọn minh chứng tại đây"}}
+        </button>
+      </view>
+      <!-- Gửi yêu cầu -->
+      <div class="guirequest">
+        <span>
+          <button bindtap="handleSubmit" class="submitre"
+            >Gửi yêu cầu
+          </button>
+        </span>
+      </div> 
+  </div>
+</div>
+</view>
+</view>

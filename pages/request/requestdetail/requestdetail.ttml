@@ -1,0 +1,27 @@
+<view class="container">
+  <text class="title">Trạng thái yêu cầu</text>
+  <view class="request-list">
+    <text style="font-size: small;" class="request-title">{{title}}</text> |
+    <text style="font-size: small;" class="request-status">{{status}}</text>
+  </view>
+  <view class="divider">------------------------------------------------</view>
+  <text class="sub-title">Lịch sử gửi yêu cầu</text>
+  <view class="table">
+    <view class="table-row table-header">
+
+        <text style="font-size: small;" class="table-cell">Tên</text>
+        <text style="font-size: small;" class="table-cell">Lý do</text>
+        <text style="font-size: small;" class="table-cell">Trạng thái</text>
+        <text style="font-size: small;" class="table-cell">Thời gian</text>
+
+    </view>
+    <block wx:for="{{requests}}" wx:key="id">
+      <view class="table-row">
+        <text class="table-cell">{{item.name}}</text>
+        <text class="table-cell">{{item.reason}}</text>
+        <text class="table-cell">{{item.status}}</text>
+        <text class="table-cell">{{item.time}}</text>
+      </view>
+    </block>
+  </view>
+</view>

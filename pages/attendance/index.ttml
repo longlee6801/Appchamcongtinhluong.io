@@ -1,0 +1,75 @@
+<view class="full-screen-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{animation}}">
+<view class="container" >
+  <view class="header mb-3">
+    <block>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      <text class="userinfo-nickname">Hi, {{userInfo.nickName}}\n<text class="bit">{{currentCompany}}</text></text>
+    </block>
+  </view>
+  <block class="content mt-3">
+    <block tt:if="{{clockInVisible == false}}">
+      <view class="time-info">
+        <text class="label">Giờ bắt đầu {{timeRealClockIn}}</text>
+      </view>
+      <view class="clock-in " id="clockInSection">
+        <text class="time">{{currentTime}}</text>
+        <block tt:if="{{isValid == false}}">
+        <button  tt:if="{{clockInLate == false}}" class="disable btn btn-block w-50 custom-button">Vào</button>
+        <button  tt:if="{{clockInLate == true}}" class="disable btn btn-block w-50 custom-button">Vào Trễ</button>
+        </block>
+
+        <block tt:if="{{isValid == true}}">
+          <button tt:if="{{clockInLate == false}}" class="btn btn-block w-50 custom-button" bindtap="clockInButton">Vào</button>
+          <button tt:if="{{clockInLate == true}}" class="btn btn-block w-50 custom-button" bindtap="clockInButton">Vào Trễ</button>
+        </block>
+        <text class="nn">Trong phạm vi: {{currentLocation}}</text>
+        <text class="nn">\nWifi: {{currentWifi}}</text>
+      </view>
+    </block>
+    <block tt:if="{{clockInVisible == true && clockOutVisible == false }}">
+      <view class="attendance-record">
+        <text class="at">Vào lúc {{clockInTime}}\n</text>
+        <text class="dc">{{currentLocation}}</text>
+        <text class="nn">\nWifi: {{currentWifi}}</text>
+      </view>
+      <view class="clock-out" id="clockOutSection">
+        <text class="time">{{currentTime}}</text>
+         <block tt:if="{{isValid == false}}">
+        <button tt:if="{{clockOutEarly == false}}" class="disable btn btn-block w-50 custom-button">Về</button>
+        <button tt:if="{{clockOutEarly == true}}" class="disable btn btn-block w-50 custom-button">Về Sớm</button>
+        </block>
+
+        <block tt:if="{{isValid == true}}">
+          <button tt:if="{{clockOutEarly == false}}" class="btn btn-block w-50 custom-button" bindtap="clockOutButton">Về</button>
+          <button tt:if="{{clockOutEarly == true}}" class="btn btn-block w-50 custom-button" bindtap="clockOutButton">Về Sớm</button>
+        </block>
+
+        <text class="nn">Trong phạm vi: {{currentLocation}}</text>
+        <text class="nn">\nWifi: {{currentWifi}}</text>
+      </view>
+      <view class="time-info">
+        <text class="label">Giờ kết thúc {{timeRealClockOut}}</text>
+      </view>
+    </block>
+    <block tt:if="{{clockOutVisible == true}}">
+      <view class="attendance-record">
+        <text class="at">Vào lúc {{clockInTime}}\n</text>
+        <text class="dc">{{currentLocation}}</text>
+        <text class="nn">\nWifi: {{currentWifi}}</text>
+      </view>
+      <view class="attendance-record">
+        <text class="at">Ra lúc {{clockOutTime}}\n</text>
+        <text class="dc">{{currentLocation}}</text>
+        <text class="nn">\nWifi: {{currentWifi}}</text>
+      </view>
+    </block>
+  </block>
+</view>
+</view>
+<view class="footer">
+  <view class="footer-version">
+    <span class="version-app"> version 2.0.11</span>
+  </view>
+</view>
+
+

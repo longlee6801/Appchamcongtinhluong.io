@@ -1,0 +1,321 @@
+@import "../common/lib/weui.wxss";
+@import "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css";
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.full-screen-container {
+  min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao của màn hình */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: #f0f0f0; /* Màu nền tùy chỉnh */
+}
+.container-export {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .icons {
+  display: flex;
+  margin:auto;
+}
+
+.header .icons text {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+
+
+
+}
+
+.header .current-date {
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  font-weight: 500;
+  padding-right: 3vw;
+  padding-left: 3vw;
+}
+
+.material-symbols-rounded{
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+
+}
+
+.content {
+  margin-top: 20px;
+}
+.page-body-info {
+  padding-bottom: 0;
+  height: 260px;
+}
+.userinfo-avatar {
+  border-radius: 128rpx;
+  width: 128rpx;
+  height: 128rpx;
+}
+.userinfo-nickname {
+  font-weight: bold;
+  margin-top: 20rpx;
+  font-size: 1em;
+}
+.total{
+  font-family: Arial, sans-serif;
+  font-size: 1.5em;
+  text-align:center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.export {
+  /* border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 auto;
+  box-sizing: border-box;
+  max-width: 400px;
+  margin: auto; */
+  /* margin-bottom: 20px;
+  padding-bottom: 10px; */
+  justify-content: space-between;
+  max-width: 400px;
+  margin: auto;
+  height: 200rpx;
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 15rpx;
+  box-shadow: 0rpx 0rpx 15rpx -10rpx #666;
+}
+.chooseMonth {
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.export .container {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.export .component-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+.export .container-text-attended {
+  margin: 0 18.8px 0 19.8px;
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  color: #000000;
+}
+.export .attended {
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .component-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.export .container-text-latein {
+  margin: 0 14.1px 0 13.1px;
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  color: #F70F0F;
+}
+.export .late-in {
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .component-6 {
+  /* margin-right: 41.4px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.export .container-text-earlyout {
+  margin: 0 18.8px 0 16.8px;
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  color: #F70F0F;
+}
+.export .early-out {
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  color: #616161;
+}
+.export .component-7 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+.export .container-text-norecorded {
+  margin-right: 1px;
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  line-height: 1.4;
+  color: #F70F0F;
+}
+.export .no-recored {
+  overflow-wrap: break-word;
+
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+  color: #616161;
+}
+.picker-placeholder{
+  float: left; 
+  padding-left: 10px; 
+  line-height: 40px;
+}
+.container-month {
+  text-align: center;
+  flex-direction: row;
+  width: fit-content;
+  box-sizing: border-box;
+
+
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+.block-header{
+  width: 800rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  margin: 30rpx;
+  border-radius: 15rpx;
+  box-shadow: 0rpx 0rpx 18rpx -10rpx #666;
+  
+}
+button.submitre:hover {
+  background-color: #034066;
+}
+.btn-export{
+  width: 300px;
+  justify-content: center;
+  padding-top: 130rpx;
+}
+.submitre{
+  float: left; 
+  width: 100%; 
+  border-radius: 11px;
+  background-color:  #045A97; 
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  margin-top: 10vw;
+}
+/* CSS for swiping effect */
+.swipe-left {
+  animation: swipeLeft 0.5s forwards;
+}
+
+.swipe-right {
+  animation: swipeRight 0.5s forwards;
+}
+.form-container {
+  position: relative;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.swipe-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.swipe-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.reset {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes swipeRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

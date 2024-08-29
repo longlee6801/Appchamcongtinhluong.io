@@ -1,0 +1,212 @@
+@import "../common/lib/weui.wxss";
+@import "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .full-screen-container {
+    min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao của màn hình */
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0; /* Màu nền tùy chỉnh */
+  }
+  .container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+      margin-top: 20px;
+      padding: 20px;
+  }
+  .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .content {
+      margin-top: 20px;
+  }
+  .time-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .time-info .label {
+    font-size: 0.7em;
+      color: gray;
+  }
+  .attendance-record, .clock-in{
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .clock-in{
+    text-align: center;
+  }
+  .clock-in .time {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  .clock-in button:hover {
+      background-color: #034066;
+  }
+  .attendance-record, .clock-out {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px 0;
+  }
+  .clock-out {
+      text-align: center;
+  }
+  .clock-out .time {
+      font-size: 24px;
+      margin: 10px 0;
+  }
+  .clock-out button:hover {
+      background-color: #034066;
+  }
+  .page-body-info {
+    padding-bottom: 0;
+    height: 260px;
+  }
+  .userinfo-avatar {
+    border-radius: 128rpx;
+    width: 128rpx;
+    height: 128rpx;
+  }
+  .userinfo-nickname {
+    font-weight: bold;
+    margin-top: 20rpx;
+    font-size: 1em;
+  }
+  .time{
+    font-size: 16rem;
+    font-weight: bold;
+  }
+  .weui-cell__ft {
+    max-width: 200px;
+    white-space: nowrap;
+  }
+  .nn{
+    font-weight: lighter;
+    font-size: 0.7em
+  }
+  .dc{
+    font-size: 0.9em;
+  }
+  .at{
+    font-size: 0.9em;
+    font-weight: bolder;
+  }
+  .hidden {
+    display: none;
+  }
+  .clock-in-late{
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .clock-in-late{
+    text-align: center;
+  }
+  .clock-in-late .time {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .clock-in-late button:hover {
+      background-color: #034066;
+  }
+  button{
+    background-color: #045A97;
+  }
+  .time-late{
+    font-size: 0.9rem;
+  }
+  .bit{
+    font-weight: lighter;
+    font-size: 0.6rem;
+  }
+  .disable{
+    pointer-events: none;
+    background-color: #BED7DC;
+    color: #B0B0B0;
+  }
+  .custom-button {
+    color: white;
+}
+/* CSS for swiping effect */
+.swipe-left {
+  animation: swipeLeft 0.5s forwards;
+}
+
+.swipe-right {
+  animation: swipeRight 0.5s forwards;
+}
+.form-container {
+  position: relative;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.swipe-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.swipe-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.reset {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes swipeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes swipeRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.footer {
+  background-color: #f0f0f0;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-version {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  margin: 10rpx;
+}
+
+.version-app{
+  font-size: 25rpx;
+}

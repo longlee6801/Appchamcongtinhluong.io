@@ -1,0 +1,74 @@
+<view class="full-screen-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{animation}}">
+  <view class="trang-report" >
+    <view class="container-box">
+      <view class="thng-k">
+        <div class="block-header">
+          <view class="component">
+            <text class="container"> {{attended}} </text>
+            <view class="circle"></view>
+            <text class="text">Đúng Giờ</text>
+          </view>
+          <view class="component">
+            <text class="container-1"> {{latein}} </text>
+            <view class="circle-1"></view>
+            <text class="text"> Vào trễ </text>
+          </view>
+          <view class="component">
+            <text class="container-2"> {{earlyout}} </text>
+            <view class="circle-2"></view>
+            <text class="text"> Về sớm </text>
+          </view>
+          <view class="component">
+            <text class="container-3"> {{norecord}} </text>
+            <view class="circle-3"></view>
+            <text class="text"> Không ghi nhận </text>
+          </view>
+        </div>
+      </view>
+      <view class="haha-container">
+        <view class="component-1">
+          <text class="text">Số ngày phép sử dụng còn lại:</text>
+          <text class="container-1"> {{daysleft}} </text>
+        </view>
+      </view>
+    </view>
+  
+    <view class="container-calendar">
+      <view class="header">
+        <view class="icons">
+          <image id="prev" class="material-symbols-rounded" bindtap="handlePrevNext" src="/image/before.svg"></image>
+        </view>
+        <text class="current-date">{{currentDate}}</text>
+        <view class="icons">
+          <image id="next" class="material-symbols-rounded" bindtap="handlePrevNext" src="/image/next.svg"></image>
+        </view>
+      </view>
+      <div class="block-calendar">
+        <view class="calendar">
+          <view class="weeks">
+            <text>CN</text>
+            <text>T2</text>
+            <text>T3</text>
+            <text>T4</text>
+            <text>T5</text>
+            <text>T6</text>
+            <text>T7</text>
+          </view>
+          <!-- <view class="days">
+            <block wx:for="{{days}}" wx:key="index">
+              <text class="{{item.inactive ? 'inactive' : ''}} {{item.active ? 'active' : ''}}" data-day="{{item.day}}" bindtap="handleDayClick">{{item.day}}</text>
+            </block>
+          </view>    -->
+  
+          <view class="days">
+            <block wx:for="{{days}}" wx:key="index">
+                <text style="background-color:{{item.color_status}};" class="{{item.inactive ? 'inactive' : ''}} {{item.active ? 'active' : ''}} " data-day="{{item.day}}" bindtap="handleDayClick">{{item.day}}</text>
+            </block>
+          </view>   
+        </view>
+      </div>
+      <div class="aaa">
+      </div>
+    </view>
+  </view>
+  </view>

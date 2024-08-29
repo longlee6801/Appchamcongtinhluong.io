@@ -1,0 +1,58 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+.request-list {
+  margin-bottom: 20px;
+}
+
+.request-title,
+.request-status {
+  font-size: 18px;
+}
+
+.divider {
+  margin: 20px 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-row {
+  display: flex;
+}
+
+.table-header {
+  font-weight: bold;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #ddd;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #fff;
+}

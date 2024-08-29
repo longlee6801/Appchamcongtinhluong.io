@@ -1,0 +1,114 @@
+<div class="trang-setting">
+  <div class="status-bar-iphone-xor-newer">
+    <div class="left-side">
+      <img class="container" src="../assets/vectors/image_2_x2.svg" />
+    </div>
+    <div class="right-side">
+      <img class="mobile-signal" src="../assets/vectors/mobile_signal_5_x2.svg" />
+      <img class="wifi" src="../assets/vectors/wifi_1_x2.svg" />
+      <img class="battery" src="../assets/vectors/battery_5_x2.svg" />
+    </div>
+  </div>
+  <div class="header">
+    <span class="cit">
+      Cài đặt
+    </span>
+    <img class="vector" src="../assets/vectors/vector_2_x2.svg" />
+  </div>
+  <div class="clockin-out-reminder-1">
+    <span class="clockin-out-reminder">
+      Clockin/Out Reminder
+    </span>
+  </div>
+  <div class="clock-reminder">
+    <div class="component-1">
+      <span class="enter-your-email">
+        Checkin/Out Reminder                               &gt; 
+      </span>
+    </div>
+    <div class="component-2">
+      <span class="enter-your-email-1">
+        Checkin/Out Reminder                               &gt; 
+      </span>
+    </div>
+  </div>
+  <div class="clockin-out-reminder-2">
+    <span class="clockin-out-reminder-4">
+      Clockin/Out Reminder
+    </span>
+  </div>
+  <div class="clock-reminder-1">
+    <div class="component-11">
+      <span class="enter-your-email-2">
+        Checkin/Out Reminder                               &gt; 
+      </span>
+    </div>
+    <div class="component-21">
+      <span class="enter-your-email-3">
+        Checkin/Out Reminder                               &gt; 
+      </span>
+    </div>
+  </div>
+  <div class="clockin-out-reminder-3">
+    <span class="clockin-out-reminder-5">
+      Clockin/Out Reminder
+    </span>
+  </div>
+  <div class="clock-reminder-2">
+    <div class="component-12">
+      <span class="enter-your-email-4">
+        Checkin/Out Reminder                               &gt; 
+      </span>
+    </div>
+    <div class="component-22">
+      <span class="enter-your-email-5">
+        Checkin/Out Reminder                               &gt; 
+      </span>
+    </div>
+  </div>
+  <div class="clock-reminder-3">
+    <div class="rectangle-36">
+    </div>
+    <span class="enter-your-email-6">
+      About                                                              &gt; 
+    </span>
+  </div>
+  <!-- <div class="tab-bar">
+    <div class="container">
+      <div class="attendence">
+        <img class="vector-1" src="../assets/vectors/vector_21_x2.svg" />
+        <span class="attendence-1">
+          Attendence
+        </span>
+      </div>
+      <div class="request">
+        <div class="report-11">
+          <img class="group" src="../assets/vectors/group_x2.svg" />
+        </div>
+        <span class="requests">
+          Requests
+        </span>
+      </div>
+      <div class="report">
+        <div class="report-1">
+          <img class="group-1" src="../assets/vectors/group_1_x2.svg" />
+        </div>
+        <span class="reports">
+          Reports
+        </span>
+      </div>
+      <div class="settings">
+        <div class="cog-solid-1">
+          <img class="vector-6" src="../assets/vectors/vector_4_x2.svg" />
+        </div>
+        <span class="settings-1">
+          Settings
+        </span>
+      </div>
+    </div>
+    <div class="home-indicator">
+      <div class="home-indicator-1">
+      </div>
+    </div>
+  </div> -->
+</div>

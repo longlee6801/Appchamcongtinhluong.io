@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/attendance/index",
+    "pages/request/request",
+    "pages/request/requestdetail/requestdetail",
+    "pages/report/report",
+    "pages/setting/setting",
+    "pages/export/export"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Chấm công",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3370FF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/attendance/index",
+        "iconPath": "image/icons_clock.png",
+        "selectedIconPath": "image/icons_clock.png",
+        "text": "Chấm công"
+      },
+      {
+        "pagePath": "pages/request/request",
+        "iconPath": "image/icons_request.png",
+        "selectedIconPath": "image/icons_request.png",
+        "text": "Yêu cầu"
+      },
+      {
+        "pagePath": "pages/report/report",
+        "iconPath": "image/icon_calendar.png",
+        "selectedIconPath": "image/icon_calendar.png",
+        "text": "Báo cáo"
+      },
+      {
+        "pagePath": "pages/export/export",
+        "iconPath": "image/icons_export.png",
+        "selectedIconPath": "image/icons_export.png",
+        "text": "Lương"
+      }
+    ]
+  },
+  "ext": {
+    "defaultPages": {
+      "sidebarMode": "pages/attendance/index",
+      "PCMode": "pages/attendance/index"
+    }
+  }
+}

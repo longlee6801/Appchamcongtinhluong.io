@@ -1,0 +1,62 @@
+<view class="full-screen-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{animation}}">
+<view class="container-export" >
+  <view class="header mb-3">
+    <block>
+      <image class="userinfo-avatar" src="{{userInfo.avatar_url}}"></image>
+      <text class="userinfo-nickname">Hi, {{userInfo.name}}</text>
+    </block>
+  </view>
+</view>
+<view class="container-export" >
+  <view class="chooseMonth">
+    <div class="container-month">
+      <view class="header">
+        <view class="icons">
+          <image id="prev" class="material-symbols-rounded" bindtap="handlePrevNext" src="/image/before.svg"></image>
+        </view>
+        <text class="current-date">{{currentDate}}</text>
+        <view class="icons">
+          <image id="next" class="material-symbols-rounded" bindtap="handlePrevNext" src="/image/next.svg"></image>
+        </view>
+      </view>
+    </div>
+  </view>
+  <view class="export">
+    <view class="component-4">
+      <text class="container-text-attended">
+        {{attended}}
+      </text>
+      <text class="attended">
+        Số ngày làm
+      </text>
+    </view>
+    <view class="component-5">
+      <text class="container-text-latein">
+        {{latein}}
+      </text>
+      <text class="late-in">
+        Vào trễ
+      </text>
+    </view>
+    <view class="component-6">
+      <text class="container-text-earlyout">
+        {{earlyout}}
+      </text>
+      <text class="early-out">
+        Về sớm
+      </text>
+    </view>
+    <view class="component-7">
+      <text class="container-text-norecorded">
+        {{norecord}}
+      </text>
+      <text class="no-recored">
+        Không ghi nhận
+      </text>
+    </view>
+  </view>
+  <view>
+    <button class="submitre" id="myButton" bindtap="exportButton" label="My Button">XUẤT PHIẾU LƯƠNG</button>
+  </view>
+</view>
+</view>
